@@ -1,0 +1,43 @@
+{
+	"name": "storage_emp_master",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_storage_nyc",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"EmployeeID": {
+				"type": "string"
+			},
+			"LastName": {
+				"type": "string"
+			},
+			"FirstName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "EmpMaster.csv",
+				"fileSystem": "dirpayrollfiles"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			}
+		]
+	}
+}
