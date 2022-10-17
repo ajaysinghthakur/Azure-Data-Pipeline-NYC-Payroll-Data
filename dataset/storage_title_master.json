@@ -1,5 +1,5 @@
 {
-	"name": "DelimitedText1",
+	"name": "storage_title_master",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ls_storage_nyc",
