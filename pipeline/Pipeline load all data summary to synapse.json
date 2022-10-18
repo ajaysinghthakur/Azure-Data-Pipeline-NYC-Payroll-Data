@@ -20,7 +20,10 @@
 						"referenceName": "Dataflow summary to synapse",
 						"type": "DataFlowReference",
 						"parameters": {
-							"dataflow_param_fiscalyear": "2020"
+							"dataflow_param_fiscalyear": {
+								"value": "@pipeline().parameters.fiscalyear",
+								"type": "Expression"
+							}
 						}
 					},
 					"staging": {
@@ -38,6 +41,12 @@
 				}
 			}
 		],
+		"parameters": {
+			"fiscalyear": {
+				"type": "int",
+				"defaultValue": 2020
+			}
+		},
 		"annotations": []
 	}
 }
