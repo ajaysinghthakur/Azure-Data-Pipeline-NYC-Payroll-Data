@@ -1,0 +1,15 @@
+{
+	"name": "df_emp_to_synapse",
+	"properties": {
+		"description": "Dataflow employee master to synapse",
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [],
+			"sinks": [],
+			"transformations": [],
+			"scriptLines": [
+				""
+			]
+		}
+	}
+}
