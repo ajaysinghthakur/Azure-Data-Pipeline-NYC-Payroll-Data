@@ -6,7 +6,7 @@
 			"sources": [
 				{
 					"dataset": {
-						"referenceName": "sqldb_nyc_payroll_data",
+						"referenceName": "synapse_nyc_payroll_data",
 						"type": "DatasetReference"
 					},
 					"name": "source1"
@@ -46,7 +46,8 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     isolationLevel: 'READ_UNCOMMITTED',",
-				"     format: 'table') ~> source1",
+				"     format: 'table',",
+				"     staged: true) ~> source1",
 				"source(output(",
 				"          FiscalYear as string,",
 				"          PayrollNumber as string,",
