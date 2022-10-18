@@ -9,14 +9,14 @@
 						"referenceName": "synapse_nyc_payroll_data",
 						"type": "DatasetReference"
 					},
-					"name": "source1"
+					"name": "synapsepayroll2021"
 				},
 				{
 					"dataset": {
 						"referenceName": "storage_nycpayroll_2020",
 						"type": "DatasetReference"
 					},
-					"name": "source2"
+					"name": "historypayroll"
 				}
 			],
 			"sinks": [],
@@ -47,7 +47,7 @@
 				"     validateSchema: false,",
 				"     isolationLevel: 'READ_UNCOMMITTED',",
 				"     format: 'table',",
-				"     staged: true) ~> source1",
+				"     staged: true) ~> synapsepayroll2021",
 				"source(output(",
 				"          FiscalYear as string,",
 				"          PayrollNumber as string,",
@@ -71,7 +71,7 @@
 				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> source2"
+				"     ignoreNoFilesFound: false) ~> historypayroll"
 			]
 		}
 	}
