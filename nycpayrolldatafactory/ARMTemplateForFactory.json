@@ -1529,13 +1529,17 @@
 								"referenceName": "Dataflow summary to synapse",
 								"type": "DataFlowReference",
 								"parameters": {
-									"dataflow_param_fiscalyear": "2020"
+									"dataflow_param_fiscalyear": {
+										"value": "@pipeline().parameters.fiscalyear",
+										"type": "Expression"
+									}
 								},
 								"datasetParameters": {
 									"payroll2021": {},
 									"historypayroll": {},
 									"sinksynapse": {}
-								}
+								},
+								"linkedServiceParameters": {}
 							},
 							"staging": {
 								"linkedService": {
@@ -1555,6 +1559,12 @@
 				"policy": {
 					"elapsedTimeMetric": {},
 					"cancelAfter": {}
+				},
+				"parameters": {
+					"fiscalyear": {
+						"type": "int",
+						"defaultValue": 2020
+					}
 				},
 				"annotations": []
 			},
