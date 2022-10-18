@@ -20,6 +20,13 @@
 						"referenceName": "df_emp_to_synapse",
 						"type": "DataFlowReference"
 					},
+					"staging": {
+						"linkedService": {
+							"referenceName": "ls_storage_nyc",
+							"type": "LinkedServiceReference"
+						},
+						"folderPath": "dirstaging"
+					},
 					"compute": {
 						"coreCount": 8,
 						"computeType": "General"
