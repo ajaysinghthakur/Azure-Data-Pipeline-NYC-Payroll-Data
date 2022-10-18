@@ -5,17 +5,6 @@
 			"referenceName": "ls_storage_nyc",
 			"type": "LinkedServiceReference"
 		},
-		"parameters": {
-			"EmployeeID": {
-				"type": "string"
-			},
-			"LastName": {
-				"type": "string"
-			},
-			"FirstName": {
-				"type": "string"
-			}
-		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
